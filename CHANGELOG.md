@@ -6,6 +6,21 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ---
 
+## [2.6.0] - 2026-10-12
+
+### Added
+- **Dedicated YouTube Media Lab & Motion Studio (`youtube.html`)**:
+  - Moved all 24/7 stream broadcast pipelines, motion videos, and media lab components from the front page into a dedicated, high-impact media page.
+  - Interactive Full HD Cinema Lightbox player with real-time video preview and technical stream specs.
+  - Official Channel spotlight for `@AsifTechGlobalOfficial` with direct subscribe CTA.
+  - Broadcast Engineering architecture breakdown (FFmpeg 60FPS encoding, RTMP ingest, failover recovery).
+- **Universal Navigation Menu**: Added "YouTube" to top navbar and footer links across all ecosystem pages (`index.html`, `projects.html`, `hr.html`, `finance.html`, `library.html`, `contact.html`, `youtube.html`).
+
+### Changed
+- **Homepage Optimization (`index.html`)**: Transformed `#portfolio` section on the front page into an ultra-clean Executive Software Engineering Portfolio showcase (HR Platform, Financial Ledger, PDF Vault, Cloud Cluster) with zero video clutter, lightning-fast loading, and direct links to the dedicated YouTube Media Lab.
+
+---
+
 ## [2.5.0] - 2026-10-12
 
 ### Added

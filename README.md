@@ -38,6 +38,7 @@ Official Channels:
 asiftechglobalofficialwebsite/
 ├── index.html              # Main ecosystem homepage & executive overview
 ├── projects.html           # Filterable projects showcase & in-depth case studies
+├── youtube.html            # Dedicated YouTube Media Lab & 24/7 stream motion studio
 ├── contact.html            # Direct advisory & consultation brief form
 ├── hr.html                 # HR & Workforce Management suite
 ├── finance.html            # Corporate Finance & Treasury suite
@@ -92,6 +93,11 @@ asiftechglobalofficialwebsite/
 ### 5. Consultation & Advisory Desk (`contact.html`)
 - Validated scope brief submission with SLA guarantees.
 - Direct links to verified social channels and GitHub repositories.
+
+### 6. YouTube Media Lab & Motion Studio (`youtube.html`)
+- Dedicated visual showcase for 24/7 stream broadcast recordings and procedural GPU animations.
+- Interactive Full HD Cinema player with technical encoding specs.
+- Official Channel spotlight for `@AsifTechGlobalOfficial` with direct subscribe CTA.
 
 ---
 
