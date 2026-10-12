@@ -20,7 +20,8 @@ const ATG_CONFIG = {
       facebook: 'https://www.facebook.com/RealAsifUniverse/',
       instagram: 'https://www.instagram.com/asiftechglobalofficial/',
       github: 'https://github.com/asifmanagement39-lab',
-      youtube: 'https://www.youtube.com/@AsifTechGlobalOfficial'
+      youtube: 'https://www.youtube.com/@AsifTechGlobalOfficial',
+      linkedin: 'https://linkedin.com'
     }
   },
 

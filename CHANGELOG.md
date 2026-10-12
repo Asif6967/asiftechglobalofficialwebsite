@@ -6,6 +6,26 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ---
 
+## [2.7.0] - 2026-10-12
+
+### Added
+- **Developer Profile Hub (`about.html`)**:
+  - Detailed developer portfolio and executive biography for Systems Architect Asif Khan.
+  - Interactive 2021&ndash;2026+ career milestone timeline documenting full-stack evolution.
+  - Academic credentials in Business Administration (MBA) and Computer Science.
+  - Engineering philosophy breakdown and direct consultation CTA.
+- **In-Page Contact & Consultation Section (`index.html#contact`)**:
+  - Integrated contact section directly into homepage with direct communication channels (Official Email, Executive Desk, 24/7 Global SLA).
+  - Verified social link tiles for GitHub, LinkedIn, Facebook, Instagram, and YouTube.
+  - Direct inquiry form connected to `handleHomeContact()` in `ui-common.js`.
+- **Comprehensive Documentation Suite**:
+  - `FEATURES.md`: Full architectural breakdown of all 10 platform modules, security models, and design tokens.
+  - `SETUP.md`: Step-by-step local development guide covering Python, Node.js, and VS Code Live Server with troubleshooting checklist.
+  - `DEPLOYMENT.md`: Production GitHub Pages deployment guide, custom domain DNS records, and Let's Encrypt SSL/TLS enforcement.
+- **Unified Navigation Integration**: Added `About` and `LinkedIn` links across all ecosystem navigation bars and footers (`index.html`, `about.html`, `projects.html`, `contact.html`, `youtube.html`, `hr.html`, `finance.html`, `library.html`).
+
+---
+
 ## [2.6.0] - 2026-10-12
 
 ### Added

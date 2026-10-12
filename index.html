@@ -23,7 +23,7 @@
       <!-- Navigation Menu -->
       <div class="nav-menu">
         <a href="#home" class="nav-link-item active">Home</a>
-        <a href="#about" class="nav-link-item">About</a>
+        <a href="about.html" class="nav-link-item">About</a>
         <a href="#skills" class="nav-link-item">Skills</a>
         <a href="projects.html" class="nav-link-item">Projects</a>
 
@@ -68,8 +68,14 @@
 
       <!-- Right Controls -->
       <div class="nav-right">
-        <!-- Social Icons (Facebook & Instagram) -->
+        <!-- Social Icons (GitHub, LinkedIn, Facebook, Instagram) -->
         <div class="nav-social-icons">
+          <a href="https://github.com/asifmanagement39-lab" target="_blank" rel="noopener" class="nav-social-btn" title="GitHub (@asifmanagement39-lab)">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener" class="nav-social-btn" title="LinkedIn">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.762-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
           <a href="https://www.facebook.com/RealAsifUniverse/" target="_blank" rel="noopener" class="nav-social-btn" title="Facebook (@RealAsifUniverse)">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
           </a>
@@ -108,8 +114,9 @@
       </p>
 
       <div class="hero-actions">
-        <a href="#ecosystem" class="btn-gold">Explore Ecosystem</a>
-        <a href="#pricing" class="btn-outline-white">View Plans</a>
+        <a href="#projects" class="btn-gold">Recent Projects</a>
+        <a href="about.html" class="btn-outline-white">About Architect</a>
+        <a href="#contact" class="btn-gold" style="background: transparent; border: 1px solid var(--gold); color: var(--gold);">Get In Touch</a>
       </div>
     </div>
   </header>
@@ -228,6 +235,11 @@
               <div style="font-size: 1.6rem; font-weight: 800; color: var(--gold);">99.9%</div>
               <div style="font-size: 0.78rem; color: var(--text-dim); text-transform: uppercase;">Uptime Architecture</div>
             </div>
+          </div>
+
+          <div style="margin-top: 1.8rem; display: flex; gap: 12px; flex-wrap: wrap;">
+            <a href="about.html" class="btn-gold" style="font-size: 0.85rem; padding: 0.6rem 1.4rem;">Read Full Biography &amp; Milestones &rarr;</a>
+            <a href="#contact" class="btn-outline-white" style="font-size: 0.85rem; padding: 0.6rem 1.4rem;">Schedule Consultation</a>
           </div>
         </div>
       </div>
@@ -360,11 +372,12 @@
   <!-- ==========================================================================
        Executive Software Engineering Portfolio
        ========================================================================== -->
-  <section class="section section-portfolio" id="portfolio">
+  <section class="section section-portfolio" id="projects">
+    <span id="portfolio" style="position: absolute; top: -80px; visibility: hidden;"></span>
     <div class="container">
       <div class="section-header">
-        <div class="section-pretitle">Signature Engineering</div>
-        <h2 class="section-h2">Executive Portfolio Showcase</h2>
+        <div class="section-pretitle">Featured Engineering</div>
+        <h2 class="section-h2">Recent Projects &amp; Signature Works</h2>
         <p style="max-width: 650px; margin: 12px auto 0; color: var(--text-dim); font-size: 0.95rem;">
           Production-grade full-stack architectures, enterprise business systems, and scalable digital infrastructure engineered by Asif Khan.
         </p>
@@ -484,11 +497,12 @@
   <!-- ==========================================================================
        Core Ecosystem & Capabilities
        ========================================================================== -->
-  <section class="section section-bg-dark" id="ecosystem">
+  <section class="section section-bg-dark" id="features">
+    <span id="ecosystem" style="position: absolute; top: -80px; visibility: hidden;"></span>
     <div class="container">
       <div class="section-header">
-        <div class="section-pretitle">What We Do</div>
-        <h2 class="section-h2">Our Core Ecosystem</h2>
+        <div class="section-pretitle">Engineering Capabilities</div>
+        <h2 class="section-h2">Features Showcase &amp; Ecosystem</h2>
       </div>
 
       <div class="ecosystem-grid">
@@ -990,6 +1004,137 @@
   </section>
 
   <!-- ==========================================================================
+       Contact & Direct Engineering Advisory
+       ========================================================================== -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-pretitle">Direct Inquiries &amp; Advisory</div>
+        <h2 class="section-h2">Contact Section</h2>
+        <p style="max-width: 680px; margin: 12px auto 0; color: var(--text-dim); font-size: 0.95rem;">
+          Have an enterprise platform, full-stack web application, or cloud infrastructure project? 
+          Initiate a direct scope brief with Asif Khan and the Asif Tech Global engineering desk.
+        </p>
+      </div>
+
+      <div class="contact-layout-grid">
+        <!-- Communication Channels Column -->
+        <div class="contact-channels-wrap">
+          <!-- Channel 1: Official Email -->
+          <div class="contact-card-box">
+            <div class="contact-card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </div>
+            <div class="contact-card-info">
+              <h4>Official Email</h4>
+              <p><a href="mailto:contact@asiftechglobal.xyz">contact@asiftechglobal.xyz</a></p>
+              <span style="font-size: 0.78rem; color: var(--text-dim);">Response window: under 2 hours</span>
+            </div>
+          </div>
+
+          <!-- Channel 2: Founder & Desk -->
+          <div class="contact-card-box">
+            <div class="contact-card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            </div>
+            <div class="contact-card-info">
+              <h4>Principal Systems Architect</h4>
+              <p style="color: var(--gold); font-weight: 600;">Asif Khan, Founder &amp; CEO</p>
+              <span style="font-size: 0.78rem; color: var(--text-dim);">Executive Desk • India</span>
+            </div>
+          </div>
+
+          <!-- Channel 3: Operational SLA -->
+          <div class="contact-card-box">
+            <div class="contact-card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            </div>
+            <div class="contact-card-info">
+              <h4>Engineering Availability</h4>
+              <p>Mon &ndash; Sat (24/7 Deployment Coverage)</p>
+              <span style="font-size: 0.78rem; color: var(--text-dim);">99.9% Uptime Production Support</span>
+            </div>
+          </div>
+
+          <!-- Channel 4: Social Channels Grid -->
+          <div style="margin-top: 1rem;">
+            <div style="font-size: 0.82rem; font-weight: 700; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 0.6rem;">Verified Social Presence</div>
+            <div class="contact-social-grid">
+              <a href="https://github.com/asifmanagement39-lab" target="_blank" rel="noopener" class="contact-social-tile" title="GitHub">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                <span>GitHub</span>
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener" class="contact-social-tile" title="LinkedIn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.762-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                <span>LinkedIn</span>
+              </a>
+              <a href="https://www.facebook.com/RealAsifUniverse/" target="_blank" rel="noopener" class="contact-social-tile" title="Facebook">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                <span>Facebook</span>
+              </a>
+              <a href="https://www.instagram.com/asiftechglobalofficial/" target="_blank" rel="noopener" class="contact-social-tile" title="Instagram">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                <span>Instagram</span>
+              </a>
+              <a href="https://www.youtube.com/@AsifTechGlobalOfficial" target="_blank" rel="noopener" class="contact-social-tile" title="YouTube">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                <span>YouTube</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Consultation Request Form Column -->
+        <div class="contact-form-panel">
+          <h3 style="font-size: 1.35rem; color: var(--gold); margin-bottom: 0.5rem;">Transmit Consultation Brief</h3>
+          <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+            Provide your project specifications below. Our systems architect will evaluate your requirements and schedule a technical roadmap briefing.
+          </p>
+
+          <form id="homeContactForm" onsubmit="event.preventDefault(); handleHomeContact();">
+            <div class="contact-form-group">
+              <label for="homeContactName" class="contact-form-label">Full Name *</label>
+              <input type="text" id="homeContactName" class="contact-form-input" placeholder="e.g. Vikramaditya Singhania" required>
+            </div>
+
+            <div class="contact-form-group">
+              <label for="homeContactEmail" class="contact-form-label">Corporate Email Address *</label>
+              <input type="email" id="homeContactEmail" class="contact-form-input" placeholder="e.g. v.singhania@enterprise.com" required>
+            </div>
+
+            <div class="contact-form-group">
+              <label for="homeContactService" class="contact-form-label">Engagement Scope</label>
+              <select id="homeContactService" class="contact-form-select">
+                <option value="Enterprise Web Application">Full-Stack Enterprise Web Application</option>
+                <option value="HR & Payroll Platform">HR Capital & Automated Payroll Suite</option>
+                <option value="Treasury & Accounting Hub">Corporate Treasury & Financial Ledger Hub</option>
+                <option value="Cloud Infrastructure & DevOps">Cloud Infrastructure (AWS / GCP) & DevOps</option>
+                <option value="Architecture Audit">Software Architecture Review & Performance Audit</option>
+              </select>
+            </div>
+
+            <div class="contact-form-group">
+              <label for="homeContactMsg" class="contact-form-label">Project Brief / Technical Requirements *</label>
+              <textarea id="homeContactMsg" class="contact-form-textarea" placeholder="Detail your project timelines, expected throughput, architectural parameters, and core objectives..." required></textarea>
+            </div>
+
+            <div style="margin-top: 1.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+              <button type="submit" class="btn-gold" style="padding: 0.75rem 1.8rem; font-size: 0.9rem;">
+                Submit Consultation Brief &rarr;
+              </button>
+              <a href="contact.html" style="font-size: 0.84rem; color: var(--gold); text-decoration: underline;">
+                Need Dedicated RFQ Form? &rarr;
+              </a>
+            </div>
+
+            <div id="homeContactFeedback" style="margin-top: 1.2rem; font-size: 0.88rem; min-height: 22px; font-weight: 600;"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
        Newsletter (Zero Emojis)
        ========================================================================== -->
   <section class="section">
@@ -1034,13 +1179,15 @@
           <h3>Navigation</h3>
           <ul>
             <li><a href="#home">Home</a></li>
-            <li><a href="#portfolio">Executive Portfolio</a></li>
+            <li><a href="about.html">About Founder</a></li>
+            <li><a href="#projects">Recent Projects</a></li>
+            <li><a href="#contact">Contact Desk</a></li>
             <li><a href="hr.html">HR Management</a></li>
             <li><a href="finance.html">Finance Operations</a></li>
             <li><a href="library.html">Digital Library</a></li>
             <li><a href="youtube.html">YouTube Media Studio</a></li>
             <li><a href="projects.html">Projects Showcase</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="contact.html">Contact Hub</a></li>
           </ul>
         </div>
 

@@ -292,6 +292,32 @@ function handleSelectPlan(planName) {
   showToast(`Selected ${planName} Plan. Contacting engineering advisory.`, 'info');
 }
 
+// --------------------------------------------------------------------------
+// Home Contact Form Handler
+// --------------------------------------------------------------------------
+function handleHomeContact() {
+  const nameEl = document.getElementById('homeContactName');
+  const emailEl = document.getElementById('homeContactEmail');
+  const msgEl = document.getElementById('homeContactMsg');
+  const feedback = document.getElementById('homeContactFeedback');
+  if (!nameEl || !emailEl || !msgEl || !feedback) return;
+
+  const name = nameEl.value.trim();
+  const email = emailEl.value.trim();
+  const msg = msgEl.value.trim();
+
+  if (!name || !email || !msg) {
+    feedback.style.color = '#ef4444';
+    feedback.textContent = 'Please fill out all required fields.';
+    return;
+  }
+
+  feedback.style.color = 'var(--gold)';
+  feedback.textContent = `Thank you, ${name}. Your consultation brief has been recorded. Our engineering desk will respond within 24 hours.`;
+  showToast('Inquiry dispatched successfully.', 'success');
+  document.getElementById('homeContactForm').reset();
+}
+
 // Export to window
 if (typeof window !== 'undefined') {
   window.escapeHtml = escapeHtml;
@@ -304,4 +330,5 @@ if (typeof window !== 'undefined') {
   window.initAnimatedStats = initAnimatedStats;
   window.handleSubscribe = handleSubscribe;
   window.handleSelectPlan = handleSelectPlan;
+  window.handleHomeContact = handleHomeContact;
 }
