@@ -2,6 +2,5 @@ User-agent: *
 Allow: /
 Disallow: /admin/
 Disallow: /private/
-Disallow: /yt_bot/
 
 Sitemap: https://asifmanagement39-lab.github.io/asiftechglobalofficialwebsite/sitemap.xml
