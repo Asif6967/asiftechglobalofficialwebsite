@@ -100,4 +100,84 @@ document.addEventListener('DOMContentLoaded', () => {
     'background: #e6b800; color: #000; font-weight: bold; padding: 4px 8px; border-radius: 4px 0 0 4px;',
     'background: #0f1424; color: #f0f0f0; padding: 4px 8px; border-radius: 0 4px 4px 0;'
   );
+
+  // 8. Developer Tabbed View Switcher ("Jis par click kare wahi khule, baki lambi karke nahi lagaye")
+  window.switchPortfolioView = function(viewId, scrollToTabs = false) {
+    if (!viewId) return;
+    const cleanId = viewId.replace('#', '');
+    
+    const panels = document.querySelectorAll('.dev-view-panel');
+    const tabs = document.querySelectorAll('.dev-tab-btn');
+    if (panels.length === 0) return;
+
+    let matchedPanel = document.getElementById('view-' + cleanId) || document.getElementById(cleanId);
+    if (!matchedPanel) {
+      // Map aliases
+      if (cleanId === 'about' || cleanId === 'vision') matchedPanel = document.getElementById('view-about');
+      else if (cleanId === 'skills') matchedPanel = document.getElementById('view-about');
+      else if (cleanId === 'projects' || cleanId === 'portfolio') matchedPanel = document.getElementById('view-projects');
+      else if (cleanId === 'portals' || cleanId === 'mba') matchedPanel = document.getElementById('view-portals');
+      else if (cleanId === 'pricing' || cleanId === 'services') matchedPanel = document.getElementById('view-pricing');
+      else if (cleanId === 'experience' || cleanId === 'timeline') matchedPanel = document.getElementById('view-experience');
+      else if (cleanId === 'contact') matchedPanel = document.getElementById('view-contact');
+      else matchedPanel = panels[0];
+    }
+    
+    if (matchedPanel) {
+      panels.forEach(p => p.classList.remove('active'));
+      matchedPanel.classList.add('active');
+      
+      const panelKey = matchedPanel.id.replace('view-', '');
+      tabs.forEach(tab => {
+        const tabTarget = tab.getAttribute('data-view');
+        if (tabTarget === panelKey) {
+          tab.classList.add('active');
+        } else {
+          tab.classList.remove('active');
+        }
+      });
+      
+      // Update browser history hash
+      try {
+        history.replaceState(null, null, '#' + panelKey);
+      } catch (err) {}
+      
+      if (scrollToTabs) {
+        const tabNavbar = document.querySelector('.dev-tab-navbar');
+        if (tabNavbar) {
+          tabNavbar.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+    }
+  };
+
+  // Check initial hash on load
+  const initialHash = window.location.hash ? window.location.hash.substring(1) : 'projects';
+  if (document.querySelectorAll('.dev-view-panel').length > 0) {
+    window.switchPortfolioView(initialHash, false);
+  }
+
+  // Handle dev tab button clicks
+  document.querySelectorAll('.dev-tab-btn').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetView = this.getAttribute('data-view');
+      window.switchPortfolioView(targetView, true);
+    });
+  });
+
+  // Handle navbar clicks to smoothly activate views
+  document.querySelectorAll('.nav-menu a, .navbar a').forEach(link => {
+    const href = link.getAttribute('href');
+    if (href && href.startsWith('#') && href !== '#home' && href !== '#') {
+      link.addEventListener('click', function(e) {
+        const targetKey = href.substring(1);
+        const panel = document.getElementById('view-' + targetKey) || document.getElementById(targetKey);
+        if (panel || ['projects', 'portals', 'experience', 'pricing', 'about', 'contact'].includes(targetKey)) {
+          e.preventDefault();
+          window.switchPortfolioView(targetKey, true);
+        }
+      });
+    }
+  });
 });
