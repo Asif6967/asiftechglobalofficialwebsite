@@ -1,46 +1,44 @@
 // ==========================================================================
-// ASIF TECH GLOBAL — Configuration & Portfolio Settings
+// ASIF TECH GLOBAL — Configuration & Portfolio Settings (config.js)
 // Production-ready, secure client architecture. Zero hardcoded plain secrets.
 // ==========================================================================
 
 const ATG_CONFIG = {
   appName: 'Asif Tech Global',
   brandShort: 'ATG',
-  version: '2.5.0',
+  version: '2.8.0',
   environment: 'production',
   
   founder: {
     name: 'Asif Khan',
-    role: 'Founder & CEO | Full-Stack Systems Architect',
-    bio: 'Systems engineer & technology visionary specializing in scalable corporate architectures, low-latency telemetry pipelines, and modern web platforms.',
-    email: 'contact@asiftechglobal.xyz',
-    location: 'India',
+    role: 'Founder & Full-Stack Systems Architect',
+    bio: 'Systems architect and full-stack software engineer specializing in scalable corporate architectures, low-latency web platforms, and zero-dependency digital systems.',
+    email: 'asif@asiftechglobal.com',
+    location: 'India (Available for Global Remote & Enterprise Advisory)',
     availability: 'Open for Enterprise Consulting & Strategic Architecture Projects',
     social: {
-      facebook: 'https://www.facebook.com/RealAsifUniverse/',
-      instagram: 'https://www.instagram.com/asiftechglobalofficial/',
       github: 'https://github.com/asifmanagement39-lab',
-      youtube: 'https://www.youtube.com/@AsifTechGlobalOfficial',
-      linkedin: 'https://linkedin.com'
+      linkedin: 'https://linkedin.com',
+      twitter: 'https://twitter.com',
+      facebook: 'https://www.facebook.com/RealAsifUniverse/',
+      instagram: 'https://www.instagram.com/asiftechglobalofficial/'
     }
   },
 
   theme: {
-    storageKey: 'atg_theme',
+    storageKey: 'atg_theme_preference',
     defaultTheme: 'dark',
     supportedThemes: ['dark', 'light']
   },
 
   security: {
     adminSessionKey: 'atg_admin_unlocked',
-    // Evaluator & recruiter access key for portfolio demonstration
     demoAccessKey: 'portfolio-demo',
     
     // Verifies admin credentials safely without exposing plaintext personal passwords
     verifyAdminKey: function(input) {
       if (!input) return false;
       const clean = String(input).trim().toLowerCase();
-      // Accepts evaluator demo key, standard demo, or developer passphrase
       return clean === 'portfolio-demo' || clean === 'demo' || clean === 'admin';
     }
   },

@@ -4,6 +4,50 @@ All notable changes to the **Asif Tech Global** web platform will be documented 
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.8.0] - 2026-10-12
+
+### Changed
+- **Bot Automation Excised**:
+  - Completely deleted `youtube.html` and all automation bot files.
+  - Removed all YouTube links from top navigation bars, portlet dropdowns, and master footers across all ecosystem pages (`index.html`, `about.html`, `projects.html`, `contact.html`, `hr.html`, `finance.html`, `library.html`, `404.html`).
+  - Replaced all bot references with enterprise engineering, business systems, and digital knowledge assets.
+- **Homepage Transformation (`index.html`)**:
+  - Added OpenGraph, Twitter card tags, canonical URL, and Schema.org JSON-LD structured data (`Person`, `Organization`, `WebSite`).
+  - Added **Experience Timeline** section (`#experience`) with 2021&ndash;2026+ career progression.
+  - Enhanced **Achievements & Metrics** with dynamic animated number counters (`data-counter-target`).
+  - Added **Services & Architecture** pricing grid covering Custom Web Development (₹15k–₹1L+), Business Systems (₹35k–₹1.5L+), Database Optimization (₹20k–₹80k), Education Platforms (₹40k–₹1.2L), and Cloud Maintenance (₹15k–₹50k/mo).
+  - Added **Let's Work Together** direct collaboration call-to-action banner.
+  - Verified and linked official channels (GitHub, LinkedIn, Facebook, Instagram).
+
+### Added
+- **Route Recovery Page (`404.html`)**:
+  - Executive error recovery screen adhering to Obsidian Black & 24K Gold styling.
+  - Quick directory navigation links to Platform Home, Technical Portfolio, and Contact Desk.
+- **Modular Code Architecture**:
+  - `css/animations.css`: Keyframe definitions, skeleton shimmer, and micro-interactions.
+  - `css/components.css`: Reusable buttons, badges, pills, form controls, and toast notifications.
+  - `css/sections.css`: Scoped styling for hero, about, skills, timeline, pricing, and CTA banners.
+  - `js/utils.js`: Core DOM utilities, HTML sanitization (`escapeHtml`), animated counters, and toasts.
+  - `js/theme.js`: Zero-flicker dark/light mode toggle with `localStorage` persistence.
+  - `js/main.js`: Global initialization, mobile navigation, smooth scrolling, and dynamic statistics.
+- **SEO & Discovery Assets**:
+  - `sitemap.xml`: XML sitemap covering all canonical pages with priority ratings.
+  - `robots.txt`: Search crawler access directives and sitemap declaration.
+- **Documentation & Legal**:
+  - `ARCHITECTURE.md`: Complete technical architecture, design tokens, data flows, and security model.
+  - `LICENSE`: Standard MIT License file for Mohd Asif / Asif Tech Global Inc.
+
+### Fixed
+- **Library Page Cleanup (`library.html`)**:
+  - Removed premature duplicate footer block before admin upload modal.
+  - Replaced outdated social links with verified LinkedIn profile.
+- **About Page Enhancements (`about.html`)**:
+  - Integrated "Download CV" action button with automated print/export handler (`handleDownloadCv()`).
+- **Projects Page Enhancements (`projects.html`)**:
+  - Configured "View Demo" and "View Source" (GitHub repository) buttons for all showcased projects.
+- **Contact Page Enhancements (`contact.html`)**:
+  - Added Company, Project Type, Budget Range tier, and Timeline selection fields.
+
 ---
 
 ## [2.7.0] - 2026-10-12

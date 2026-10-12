@@ -156,7 +156,6 @@
         </div>
 
         <a href="library.html" class="nav-link-item">Library</a>
-        <a href="youtube.html" class="nav-link-item">YouTube</a>
         <a href="contact.html" class="nav-link-item">Contact</a>
       </div>
 
@@ -224,7 +223,10 @@
             <a href="https://linkedin.com" target="_blank" rel="noopener" class="btn-outline-gold" style="padding: 0.55rem 1.1rem; font-size: 0.85rem;">
               LinkedIn Network
             </a>
-            <a href="projects.html" class="btn-gold" style="padding: 0.55rem 1.2rem; font-size: 0.85rem;">
+            <button type="button" onclick="handleDownloadCv()" class="btn-gold" style="padding: 0.55rem 1.2rem; font-size: 0.85rem; cursor: pointer;">
+              Download CV &darr;
+            </button>
+            <a href="projects.html" class="btn-secondary" style="padding: 0.55rem 1.2rem; font-size: 0.85rem;">
               View Portfolio &rarr;
             </a>
           </div>
@@ -430,7 +432,6 @@
             <li><a href="hr.html">HR Management</a></li>
             <li><a href="finance.html">Finance Operations</a></li>
             <li><a href="library.html">Digital Library</a></li>
-            <li><a href="youtube.html">YouTube Media Studio</a></li>
             <li><a href="contact.html">Contact Us</a></li>
           </ul>
         </div>
@@ -495,14 +496,21 @@
 
   <!-- Modular Scripts -->
   <script src="js/config.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/theme.js"></script>
   <script src="js/ui-common.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      initTheme();
-      initNavbarScroll();
-      initMbaDropdown();
-      initScrollTop();
-    });
+    function handleDownloadCv() {
+      if (window.ATGUtils) {
+        window.ATGUtils.showToast('Generating Executive Curriculum Vitae...', 'info', 2500);
+      }
+      setTimeout(() => {
+        // Open print view of about page or download portfolio document
+        window.print();
+      }, 600);
+    }
   </script>
 </body>
 </html>

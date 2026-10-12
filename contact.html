@@ -145,7 +145,6 @@
         </div>
 
         <a href="library.html" class="nav-link-item">Library</a>
-        <a href="youtube.html" class="nav-link-item">YouTube</a>
         <a href="contact.html" class="nav-link-item active">Contact</a>
       </div>
 
@@ -212,7 +211,7 @@
             </div>
             <div class="contact-channel-details">
               <h4>Direct Email</h4>
-              <p><a href="mailto:contact@asiftechglobal.xyz">contact@asiftechglobal.xyz</a></p>
+              <p><a href="mailto:asif@asiftechglobal.com">asif@asiftechglobal.com</a></p>
             </div>
           </div>
 
@@ -266,22 +265,51 @@
             </div>
 
             <div class="contact-field-group">
-              <label for="contactCategory">Engagement Domain</label>
-              <select id="contactCategory" class="contact-field-select">
-                <option value="Enterprise Platform">Enterprise Web Architecture</option>
-                <option value="HR / Finance Software">Corporate Systems & Portal Engineering</option>
-                <option value="Cloud / System Optimization">Performance Tuning & Infrastructure</option>
-                <option value="Advisory / Consultation">Technical Leadership Advisory</option>
-              </select>
+              <label for="contactCompany">Company / Organization</label>
+              <input type="text" id="contactCompany" class="contact-field-input" placeholder="e.g. Acme Enterprises Ltd.">
             </div>
 
             <div class="contact-field-group">
-              <label for="contactMsg">Project Brief / Message</label>
-              <textarea id="contactMsg" class="contact-field-textarea" rows="5" placeholder="Detail your requirements, timeline, and current system architecture..." required></textarea>
+              <label for="contactCategory">Project Type</label>
+              <select id="contactCategory" class="contact-field-select">
+                <option value="Custom Web Development">Custom Web Development</option>
+                <option value="Business System Design">Business System Design (HR / Finance / Library)</option>
+                <option value="Database Architecture">Database Architecture &amp; Optimization</option>
+                <option value="Educational Platform">Educational Platform Development</option>
+                <option value="Cloud Deployment">Cloud Deployment &amp; DevOps Maintenance</option>
+                <option value="Advisory / Consultation">Technical Architecture Consultation</option>
+              </select>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+              <div class="contact-field-group">
+                <label for="contactBudget">Budget Range</label>
+                <select id="contactBudget" class="contact-field-select">
+                  <option value="₹15k - ₹50k">₹15,000 &ndash; ₹50,000</option>
+                  <option value="₹50k - ₹1L">₹50,000 &ndash; ₹1,00,000</option>
+                  <option value="₹1L+">₹1,00,000+</option>
+                  <option value="Advisory">Hourly / Retainer Advisory</option>
+                </select>
+              </div>
+
+              <div class="contact-field-group">
+                <label for="contactTimeline">Target Timeline</label>
+                <select id="contactTimeline" class="contact-field-select">
+                  <option value="1-2 Weeks">1 &ndash; 2 Weeks (Urgent)</option>
+                  <option value="1 Month">1 Month (Standard)</option>
+                  <option value="2-3 Months">2 &ndash; 3 Months (Complex)</option>
+                  <option value="Ongoing">Continuous SLA</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="contact-field-group">
+              <label for="contactMsg">Project Brief / Technical Requirements</label>
+              <textarea id="contactMsg" class="contact-field-textarea" rows="4" placeholder="Detail your project objectives, tech stack preferences, and scope..." required></textarea>
             </div>
 
             <button type="submit" class="btn-gold" style="width: 100%; justify-content: center; padding: 0.9rem; font-size: 0.95rem;">
-              Dispatch Inquiry &rarr;
+              Dispatch Consultation Brief &rarr;
             </button>
             <div id="contactFeedback" style="margin-top: 15px; font-size: 0.9rem; min-height: 24px; text-align: center;"></div>
           </form>
@@ -312,7 +340,6 @@
             <li><a href="hr.html">HR Management</a></li>
             <li><a href="finance.html">Finance Operations</a></li>
             <li><a href="library.html">Digital Library</a></li>
-            <li><a href="youtube.html">YouTube Media Studio</a></li>
             <li><a href="contact.html">Contact Us</a></li>
           </ul>
         </div>
@@ -369,7 +396,11 @@
   </button>
 
   <script src="js/config.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/theme.js"></script>
   <script src="js/ui-common.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       initTheme();

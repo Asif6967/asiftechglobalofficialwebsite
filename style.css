@@ -1,8 +1,12 @@
 /* ==========================================================================
-   ASIF TECH GLOBAL — Universal Master Stylesheet
-   Modular imports: Theme & Design Tokens, Core Components, and Responsive Optimization.
+   ASIF TECH GLOBAL — Master Modular Stylesheet (style.css)
+   Composes all architecture layers: Tokens, Animations, Components,
+   Core Layouts, Sections, and Fluid Responsive Media Queries.
    ========================================================================== */
 
 @import url("css/theme.css");
+@import url("css/animations.css");
+@import url("css/components.css");
 @import url("css/main.css");
+@import url("css/sections.css");
 @import url("css/responsive.css");

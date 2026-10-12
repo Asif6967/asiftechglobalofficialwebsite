@@ -140,7 +140,6 @@
         </div>
 
         <a href="library.html" class="nav-link-item">Library</a>
-        <a href="youtube.html" class="nav-link-item">YouTube</a>
         <a href="contact.html" class="nav-link-item">Contact</a>
       </div>
 
@@ -352,7 +351,6 @@
             <li><a href="hr.html">HR Management</a></li>
             <li><a href="finance.html">Finance Operations</a></li>
             <li><a href="library.html">Digital Library</a></li>
-            <li><a href="youtube.html">YouTube Media Studio</a></li>
             <li><a href="contact.html">Contact Us</a></li>
           </ul>
         </div>
@@ -410,8 +408,11 @@
 
   <!-- Modular Scripts -->
   <script src="js/config.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/theme.js"></script>
   <script src="js/ui-common.js"></script>
   <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       initTheme();
@@ -441,9 +442,10 @@
                 ${p.stack.map(s => `<span>${s}</span>`).join('')}
               </div>
 
-              <div style="display: flex; gap: 10px; align-items: center; border-top: 1px solid var(--border-subtle); padding-top: 12px;">
-                <a href="${p.liveUrl}" class="btn-gold" style="padding: 0.45rem 1rem; font-size: 0.82rem;">Live Portal &rarr;</a>
-                <a href="${p.caseStudyLink}" style="color: var(--gold); font-size: 0.82rem; font-weight: 600;">Case Study</a>
+              <div style="display: flex; gap: 8px; align-items: center; border-top: 1px solid var(--border-subtle); padding-top: 12px; flex-wrap: wrap;">
+                <a href="${p.liveUrl}" class="btn-gold" style="padding: 0.45rem 1rem; font-size: 0.82rem;">View Demo &rarr;</a>
+                <a href="${p.githubUrl || 'https://github.com/asifmanagement39-lab/asiftechglobalofficialwebsite'}" target="_blank" rel="noopener" class="btn-secondary" style="padding: 0.45rem 0.9rem; font-size: 0.82rem;">View Source</a>
+                <a href="${p.caseStudyLink}" style="color: var(--gold); font-size: 0.82rem; font-weight: 600; margin-left: auto;">Case Study</a>
               </div>
             </div>
           </div>

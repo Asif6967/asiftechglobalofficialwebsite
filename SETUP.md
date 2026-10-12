@@ -1,77 +1,60 @@
-# Local Development & Setup Guide | Asif Tech Global
+# Local Setup & Development Guide | Asif Tech Global
 
-This guide provides instructions for setting up, running, and testing the **Asif Tech Global** executive portfolio and web platform locally on your machine.
-
----
-
-## 1. System Prerequisites
-
-The platform is engineered using modern standards-compliant HTML5, CSS3, and ES6+ JavaScript. It requires **no compilation, no bundler step, and no heavy runtime dependencies**.
-
-To run the application locally, you only need:
-- Any modern web browser: **Google Chrome**, **Mozilla Firefox**, **Apple Safari**, or **Microsoft Edge**.
-- A lightweight static HTTP server (choose any one of the options below).
-
-> [!IMPORTANT]
-> **Why an HTTP server is recommended over `file:///`:**  
-> The Knowledge Library (`library.html`) utilizes Mozilla's **PDF.js** with asynchronous Web Workers (`pdf.worker.min.js`). Web browsers restrict Worker script initialization and CORS requests over the `file://` protocol for security. Running a local HTTP server guarantees that all PDF decoding workers and asset fetch calls operate correctly.
+This guide details how to clone, run, and verify the **Asif Tech Global** executive portfolio and web platform in a local development environment.
 
 ---
 
-## 2. Quickstart Execution Methods
+## 1. System Requirements
+
+- **Modern Web Browser**: Google Chrome (v110+), Mozilla Firefox (v110+), Microsoft Edge (v110+), or Apple Safari (v16+).
+- **Lightweight HTTP Server**: Any static HTTP server (Python 3, Node.js, PHP, or VS Code Live Server).
+- **Git**: For repository version control.
+
+> [!NOTE]
+> Due to browser security restrictions regarding Web Workers and Cross-Origin Resource Sharing (CORS), the in-browser PDF rendering engine (`library.html`) must be served over an HTTP/HTTPS protocol (`http://localhost`), not via the `file:///` URI scheme.
+
+---
+
+## 2. Quickstart Instructions
 
 ### Option A: Python 3 (Recommended)
 
-Python includes a built-in HTTP server.
+Python is pre-installed on most macOS and Linux distributions and is standard on Windows developer workstations:
 
 ```bash
-# Navigate to the project root directory
+# 1. Clone the repository
+git clone https://github.com/asifmanagement39-lab/asiftechglobalofficialwebsite.git
+
+# 2. Enter repository directory
 cd asiftechglobalofficialwebsite
 
-# Launch the server on port 8080 (Windows / macOS / Linux)
+# 3. Launch HTTP server on port 8080
 python -m http.server 8080
-
-# If your system uses 'python3':
-python3 -m http.server 8080
 ```
 
-Once started, open your browser and visit:  
-**`http://localhost:8080`**
+Open your browser to: **`http://localhost:8080`**
 
 ---
 
-### Option B: Node.js / npx
+### Option B: Node.js / npx serve
 
-If you have Node.js installed, you can use `npx` to run a static server without installing any packages globally:
+If you have Node.js installed:
 
 ```bash
-# Using 'serve'
-npx serve . -p 8080
-
-# Or using 'http-server'
-npx http-server -p 8080 -c-1
+# Launch zero-configuration static server
+npx serve .
 ```
 
-Once started, open your browser and visit:  
-**`http://localhost:8080`**
+Open the local network URL displayed in your terminal (typically `http://localhost:3000`).
 
 ---
 
 ### Option C: VS Code Live Server Extension
 
-If you use Visual Studio Code:
-1. Open the project folder in VS Code.
-2. Install the **Live Server** extension (by Ritwick Dey) from the Extensions marketplace.
-3. Right-click on `index.html` in the file explorer.
-4. Select **"Open with Live Server"**.
-5. The site will automatically launch in your default browser at `http://127.0.0.1:5500/index.html`.
-
----
-
-### Option D: Direct Browser Execution (Static Inspection)
-
-For quick inspection of layout and style without PDF rendering:
-- Double-click `index.html`, `about.html`, `projects.html`, or `contact.html` to open directly in your web browser.
+1. Open the repository root folder in **Visual Studio Code**.
+2. Install the **Live Server** extension by Ritwick Dey (`ms-vscode.live-server` or `ritwickdey.liveserver`).
+3. Right-click `index.html` in the file explorer and select **"Open with Live Server"**.
+4. Your default browser will launch automatically at `http://127.0.0.1:5500`.
 
 ---
 
@@ -79,96 +62,80 @@ For quick inspection of layout and style without PDF rendering:
 
 ```text
 asiftechglobalofficialwebsite/
-├── index.html              # Main homepage: Hero, About, Skills, Features, Projects & In-Page Contact
+├── index.html              # Main homepage: Hero, About, Skills, Experience, Projects, Services & Contact
 ├── about.html              # Detailed developer portfolio info, founder biography & milestone timeline
 ├── projects.html           # Interactive project showcase with category filters & case studies
 ├── contact.html            # Dedicated project inquiry & consultation brief form
-├── youtube.html            # YouTube Media Lab: 24/7 stream simulations & cinema player
 ├── hr.html                 # HR & Workforce Management portal with interactive payroll engine
 ├── finance.html            # Corporate Treasury portal with double-entry ledgers & GST invoices
-├── library.html            # Digital Knowledge Library powered by in-browser Mozilla PDF.js
+├── library.html            # Digital Knowledge Vault powered by in-browser Mozilla PDF.js
+├── 404.html                # Custom HTTP 404 Route Recovery Page
 ├── style.css               # Root CSS aggregator
 │
 ├── js/                     # Modular JavaScript Architecture
 │   ├── config.js           # Configuration, verified channels, metadata & security keys
-│   ├── ui-common.js        # Shared utilities: theme toggle, toast alerts, mobile drawer, modals
-│   ├── data.js             # Developer profile, skills matrix, project archive & case study data
-│   ├── dashboard.js        # Payroll calculation engine, shift math & document upload handlers
-│   └── library.js          # Live search filters, topic pills & PDF.js modal viewer
+│   ├── utils.js            # Core DOM helpers, escapeHtml, animateCounter, showToast
+│   ├── theme.js            # Zero-flicker dark/light mode toggle with localStorage sync
+│   ├── ui-common.js        # Shared utilities: toast alerts, mobile drawer, modals
+│   ├── data.js             # Developer profile, skills matrix, project archive & metrics
+│   ├── dashboard.js        # Payroll calculation engine, shift math & finance handlers
+│   ├── library.js          # Live search filters, topic pills & PDF.js modal viewer
+│   └── main.js             # Global initialization, scroll tracking, animated counters
 │
 ├── css/                    # Modular CSS Design System
-│   ├── theme.css           # Design tokens: 24K Gold & Obsidian color palette, typography, shadows
-│   ├── main.css            # Base styles, navbar, hero, cards, forms, modals & contact grid
-│   └── responsive.css      # Fluid responsive breakpoints (Desktop, Tablet, Mobile)
+│   ├── theme.css           # Design tokens: 24K Gold & Obsidian color palette, typography
+│   ├── main.css            # Base styles, navbar, typography & components
+│   ├── components.css      # Reusable buttons, badges, pills, form controls, toasts
+│   ├── sections.css        # Hero, About, Skills, Experience, Pricing, and CTA styles
+│   ├── responsive.css      # Fluid responsive breakpoints & mobile adaptations
+│   └── animations.css      # Keyframes, shimmer loaders, pulse and fade-ins
 │
-├── assets/                 # Video motion clips, branding logos & portrait photography
-├── documents/              # Sample PDF documents & publications for library testing
-├── pdf.min.js              # Mozilla PDF.js library engine
-├── pdf.worker.min.js       # Asynchronous Web Worker for PDF rasterization
-├── FEATURES.md             # Comprehensive breakdown of all platform features & architectures
-├── DEPLOYMENT.md           # Step-by-step GitHub Pages & custom domain deployment guide
-├── CONTRIBUTING.md         # Contribution guidelines & coding conventions
-├── CHANGELOG.md            # Release history & version migration log
-└── README.md               # Main project introduction & overview
+├── assets/                 # Ambient motion backgrounds, portraits & branding media
+├── documents/              # Sample PDF documents for library testing
+├── pdf.min.js              # Mozilla PDF.js core rendering engine
+├── pdf.worker.min.js       # Web Worker for asynchronous PDF decoding
+├── sitemap.xml             # XML sitemap for search engines
+├── robots.txt              # Web crawler access directives
+├── LICENSE                 # MIT License
+├── ARCHITECTURE.md         # Technical architecture documentation
+├── FEATURES.md             # In-depth architectural feature specifications
+├── SETUP.md                # Local development instructions & verification checklist
+├── DEPLOYMENT.md           # GitHub Pages & custom domain deployment guide
+├── CONTRIBUTING.md         # Developer guidelines & contribution standards
+├── CHANGELOG.md            # Release version history & migration log
+└── README.md               # Technical documentation
 ```
 
 ---
 
-## 4. Configuration & Customization
+## 4. Code Standards & Architecture
 
-All primary configurations and metadata are centralized in [`js/config.js`](file:///c:/Users/ASIF/Desktop/video%20coding/asiftechglobalofficialwebsite/js/config.js):
+When contributing or adding new features locally:
 
-### 1. Updating Social & Contact Channels
-Modify `ATG_CONFIG.social` in `js/config.js` to change contact endpoints across all pages:
-
-```javascript
-social: {
-  github: 'https://github.com/asifmanagement39-lab',
-  linkedin: 'https://linkedin.com',
-  facebook: 'https://www.facebook.com/RealAsifUniverse/',
-  instagram: 'https://www.instagram.com/asiftechglobalofficial/',
-  youtube: 'https://www.youtube.com/@AsifTechGlobalOfficial',
-  email: 'asif@asiftechglobal.com'
-}
-```
-
-### 2. Updating Profile Data & Case Studies
-Developer statistics, skills badges, and project entries can be customized in [`js/data.js`](file:///c:/Users/ASIF/Desktop/video%20coding/asiftechglobalofficialwebsite/js/data.js):
-- `DEVELOPER_PROFILE`: Personal biography, focus areas, and metrics.
-- `SKILLS_DATA`: Technical competencies across Frontend, Backend, Cloud, and Media.
-- `PROJECTS_DATA`: Showcase cards with tags, descriptions, live demo links, and GitHub links.
-- `CASE_STUDIES`: In-depth architectural breakdowns displayed on `projects.html`.
-
-### 3. Demo Admin Passkey
-For demonstration purposes in the HR and Finance document upload gates, the default administrative keys can be set in `js/config.js`:
-
-```javascript
-security: {
-  adminKey: 'portfolio-demo', // Change or set to an environment parameter
-  verifyAdminKey: function(key) {
-    const validKeys = [this.adminKey, 'demo', 'admin'];
-    return validKeys.includes((key || '').trim());
-  }
-}
-```
+1. **Zero External Frameworks**: Do not introduce React, Vue, Angular, or jQuery dependencies. Keep all code in pure, high-performance vanilla JavaScript and CSS.
+2. **Zero Emoji Policy**: Do not use emojis in user interfaces, buttons, badges, or documentation. Use inline SVG icons and clean typography.
+3. **CSS Custom Properties**: Define all new colors, spacing, and font sizes using existing design tokens in `css/theme.css`.
+4. **Security Best Practices**: Never commit plaintext API keys or administrative passwords to client-side code. Use `ATG_CONFIG.security.verifyAdminKey` patterns.
+5. **DOM Sanitization**: Always use `AsifUtils.escapeHtml()` or `uiCommon.escapeHtml()` before interpolating user-supplied strings into `innerHTML`.
 
 ---
 
-## 5. Local Verification & Testing Checklist
+## 5. Local Verification Checklist
 
-After starting your local server, verify all features by walking through this checklist:
+Verify key functionality locally before committing changes:
 
 | Test Item | Verification Steps | Expected Result |
 | :--- | :--- | :--- |
-| **Homepage Navigation** | Click each navbar link (`Home`, `About`, `Projects`, `Features`, `Contact`) | Smooth scrolling to corresponding section or direct navigation |
+| **Homepage Navigation** | Click each navbar link (`Home`, `About`, `Projects`, `Library`, `Contact`) | Smooth scrolling to corresponding section or direct navigation |
 | **Theme Toggle** | Click the theme icon button in the header | Seamless transition between Obsidian Dark and Clean Light modes |
 | **In-Page Contact Form** | Submit sample inputs in `#contact` on `index.html` | Immediate toast notification confirming dispatch without page reload |
 | **Dedicated Contact Form** | Fill out and submit form on `contact.html` | Success toast with inquiry tracking reference |
-| **About Page** | Navigate to `about.html` | Displays founder bio, credentials, career milestone timeline & skills |
-| **Projects Live Filtering** | On `projects.html`, click filter pills (`Enterprise`, `Knowledge`, `Motion`) | Cards filter instantly without page reload |
-| **Knowledge Library** | Visit `library.html`, type in search bar, click on a document | Search filters items instantly; clicking opens PDF in reader modal |
+| **About Page** | Navigate to `about.html` | Displays founder bio, credentials, career milestone timeline, and "Download CV" action |
+| **Projects Live Filtering** | On `projects.html`, click filter pills (`Enterprise`, `Knowledge`, `Cloud`, `All`) | Cards filter instantly without page reload; "View Demo" & "View Source" buttons work |
+| **Knowledge Vault** | Visit `library.html`, type in search bar, click on a document | Search filters items instantly; clicking opens PDF in reader modal |
 | **HR Payroll Calculator** | On `hr.html`, enter basic salary and select allowances | Take-home salary, EPF, ESI, and TDS calculate automatically |
-| **YouTube Media Lab** | On `youtube.html`, click "Play in Cinema Viewer" on any motion card | Full HD cinema modal opens and plays selected video clip |
+| **Finance Treasury Ledger** | On `finance.html`, interact with ledger entries | Debit/credit figures balance dynamically |
+| **Route Recovery 404** | Navigate to `http://localhost:8080/404.html` | Displays executive 404 screen with quick recovery route buttons |
 | **Responsive Layout** | Open Developer Tools (F12) and toggle mobile device mode | Navigation collapses to mobile drawer; grids reflow gracefully |
 
 ---
@@ -184,20 +151,9 @@ After starting your local server, verify all features by walking through this ch
 - **Solution**: Specify an alternative port:
   ```bash
   python -m http.server 8085
-  # Or
-  npx serve . -p 8085
   ```
+  Then access `http://localhost:8085`.
 
-### Problem: Styles or Scripts Are Not Updating After Edits
-- **Cause**: Browser HTTP caching.
-- **Solution**: Perform a hard refresh:
-  - **Windows / Linux**: `Ctrl + F5` or `Ctrl + Shift + R`
-  - **macOS**: `Cmd + Shift + R`
-  - Alternatively, open your browser's DevTools, go to the **Network** tab, and check **"Disable cache"**.
-
----
-
-## 7. Next Steps
-
-- Consult [`FEATURES.md`](file:///c:/Users/ASIF/Desktop/video%20coding/asiftechglobalofficialwebsite/FEATURES.md) for deep dives into system architecture and module specifications.
-- Consult [`DEPLOYMENT.md`](file:///c:/Users/ASIF/Desktop/video%20coding/asiftechglobalofficialwebsite/DEPLOYMENT.md) for step-by-step instructions on deploying the platform to GitHub Pages with custom domains and HTTPS.
+### Problem: Styling Changes Do Not Appear
+- **Cause**: The browser has cached stylesheet assets.
+- **Solution**: Perform a hard refresh using `Ctrl + F5` (Windows/Linux) or `Cmd + Shift + R` (macOS).

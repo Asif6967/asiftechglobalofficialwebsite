@@ -143,11 +143,11 @@ Before announcing or sharing your live URL, verify the following:
 
 - [ ] **Home Page Assets**: Images, typography, and gold gradient banners load with zero broken icons.
 - [ ] **About Page**: Biography, milestones timeline, and portrait render properly at `about.html`.
-- [ ] **Projects Page**: Filter pills (`All`, `Enterprise`, `Knowledge`, `Motion`) filter project cards dynamically at `projects.html`.
+- [ ] **Projects Page**: Filter pills (`All`, `Enterprise`, `Knowledge`, `Cloud`) filter project cards dynamically at `projects.html`; "View Demo" and "View Source" buttons operate properly.
 - [ ] **Contact Section**: In-page contact on `index.html` and dedicated form on `contact.html` validate inputs and show success toasts.
-- [ ] **Knowledge Library**: Document grid renders and clicking any title opens the reader modal at `library.html`.
-- [ ] **YouTube Media Lab**: Cinema viewer modal plays high-definition video clips without console errors at `youtube.html`.
-- [ ] **HTTPS Enforced**: Green padlock icon displays in the browser address bar with valid SSL certificate.
+- [ ] **Knowledge Vault**: Document grid renders and clicking any title opens the reader modal at `library.html`.
+- [ ] **Route Recovery 404**: Error page loads properly with navigation links at `404.html`.
+- [ ] **HTTPS Enforced**: Valid SSL certificate active with strict transport security.
 - [ ] **Mobile Drawer**: Responsive hamburger menu opens and closes smoothly on iOS and Android viewports.
 
 ---
