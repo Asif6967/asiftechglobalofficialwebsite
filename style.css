@@ -3871,6 +3871,223 @@ footer {
   border: 1px solid rgba(230, 184, 0, 0.25);
 }
 
+/* ==========================================================================
+   Founder Spotlight & Social Media Architecture
+   ========================================================================== */
+.team-card.founder-spotlight {
+  border-color: var(--gold-border);
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.05) 0%, rgba(12, 12, 12, 0.95) 100%);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 25px rgba(255, 215, 0, 0.15);
+  position: relative;
+}
 
+.founder-spotlight::before {
+  content: "FOUNDER";
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 800;
+  color: var(--gold);
+  background: rgba(255, 215, 0, 0.1);
+  border: 1px solid var(--gold-border);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  letter-spacing: 0.1em;
+}
 
+.founder-avatar-box {
+  width: 90px !important;
+  height: 90px !important;
+  border: 2px solid var(--gold) !important;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.35) !important;
+  overflow: hidden !important;
+  background: #000 !important;
+}
 
+.founder-photo-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.team-social-links {
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-top: 1.25rem;
+}
+
+.t-social-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition);
+  text-decoration: none;
+}
+
+.t-social-btn:hover {
+  background: var(--gold);
+  color: #000;
+  border-color: var(--gold);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+}
+
+.nav-social-icons {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.nav-social-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all var(--transition);
+}
+
+.nav-social-btn:hover {
+  color: var(--gold);
+  border-color: var(--gold-border);
+  transform: translateY(-2px);
+}
+
+.social-channel-list li {
+  margin-bottom: 0.75rem;
+}
+
+.social-channel-list a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.88rem;
+  transition: color var(--transition);
+}
+
+.social-channel-list a:hover {
+  color: var(--gold);
+}
+
+.social-channel-list svg {
+  color: var(--gold);
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   Portfolio Works Grid & Video Cards
+   ========================================================================== */
+.portfolio-works-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.portfolio-work-card {
+  background: var(--dark-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: all var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio-work-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.9), var(--gold-glow);
+}
+
+.work-media-box {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  overflow: hidden;
+}
+
+.work-video-preview {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.portfolio-work-card:hover .work-video-preview {
+  transform: scale(1.05);
+}
+
+.work-badge {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  background: rgba(0, 0, 0, 0.8);
+  border: 1px solid var(--gold-border);
+  color: var(--gold);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+}
+
+.work-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.work-content h4 {
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-main);
+  transition: color var(--transition);
+}
+
+.portfolio-work-card:hover .work-content h4 {
+  color: var(--gold);
+}
+
+.work-content p {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+}
+
+.work-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.work-tags span {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-muted);
+  padding: 0.2rem 0.55rem;
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+}
